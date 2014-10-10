@@ -1,1 +1,2 @@
 C:\Users\Keiran\Documents\GitHub\Snake\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Users\Keiran\Documents\GitHub\Snake\src\Snake\bin\Debug\Snake.exe.config
