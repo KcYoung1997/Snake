@@ -7,55 +7,71 @@ namespace SnakeGame
     {
         static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
             //Loop game Infinitley
             for (; ; )
             {
+                //int[] options = MainMenu();
+                
                 //Play with defualt Settings, will be set by a menu in later versions
                 Play(20,20,10);
             }
         }
+        static int[] MainMenu()
+        {
+            int menu1 = Cons.Menu("Snake", new[] { "Start Playing", "Tron (2P) - Out of order", "Looping mode", "View Highscores" });
+            return new[] {20, 20, 10};
+        }
         static void Play(int sizeX, int sizeY, int speed)
         {
             int score = 0;
-            InitUi(sizeX, sizeY);
+            //Create snake from snake.cs and set it's bounds so it dies when is leaves the play area
             var snake = new Snake(sizeX, sizeY);
+            //Create a new thread to take in and pass controls to the snake, start it.
             var controlThread = new Thread(() => Controls(snake));
             controlThread.Start();
+            //Initialize playing area
+            InitUi(sizeX, sizeY);
             //Make new apples until Apple is not inside of snake
             var apple = new Apple(sizeX, sizeY);
             while (snake.IsTouching(apple.X, apple.Y))apple = new Apple(sizeX, sizeY);
-            DateTime start = DateTime.Now;
+
+            DateTime sinceLastTick = DateTime.Now;
             Thread.Sleep(500);
             while (!snake.Dead)
             {
-                if (DateTime.Now - start > TimeSpan.FromMilliseconds(1000 / speed))
+                if (DateTime.Now - sinceLastTick > TimeSpan.FromMilliseconds(1000 / speed))
                 {
-                    start = DateTime.Now;
+                    sinceLastTick = DateTime.Now;
                     snake.Tick();
                 }
-                if (snake.IsTouching(apple.X, apple.Y))
+                //If snake isn't touching apple, skip back to start of while loop
+                if (!snake.IsTouching(apple.X, apple.Y)) continue;
+                //If it is touching apple
+                snake.Length++;
+                //Add to the score based on a basic algorithm taking into account size of play area and speed
+                score += (int)Math.Ceiling((speed ^ 2 * 1000) / Math.Sqrt(sizeX * sizeY));
+                //Update the score's display value
+                ShowScore(sizeY, score);
+                while (snake.IsTouching(apple.X, apple.Y))
                 {
-                    snake.Length++;
-                    score += (int)Math.Ceiling((speed ^ 2 * 1000) / Math.Sqrt(sizeX * sizeY));
-                    ShowScore(sizeY, score);
-                    while (snake.IsTouching(apple.X, apple.Y))
-                    {
-                        Console.SetCursorPosition(apple.X, apple.Y);
-                        Console.Write("O");
-                        apple = new Apple(sizeX, sizeY);
-                    }
+                    //Write snake body to Apples previous location
+                    Console.SetCursorPosition(apple.X, apple.Y);
+                    Console.Write("O");
+                    //Spawn new apple
+                    apple = new Apple(sizeX, sizeY);
                 }
             }
+            //Stop controls thread.
             controlThread.Abort();
             //Highscores(score);
         }
         static void InitUi(int x, int y)
         {
             Console.CursorVisible = false;
-            Console.SetWindowSize(x + 2, y + 7);
-            Console.SetBufferSize(x + 2, y + 7);
+            Cons.SetWindowSize(x + 2, y + 7);
             Console.SetCursorPosition(0, 0);
-            for (int i = 0; i < x + 2; i++) Console.Write("#");
+            Cons.WriteRowOf('#');
             for (int i = 0; i < y; i++)
             {
                 Console.Write("#");
@@ -65,14 +81,8 @@ namespace SnakeGame
                 }
                 Console.Write("#");
             }
-            for (int i = 0; i < x + 2; i++) Console.Write("#");
-            int spaces = (int)Math.Ceiling(x / 2f) - 2;
-            for (int i = 0; i < spaces; i++)
-                Console.Write(" ");
-            Console.Write("Snake");
-            for (int i = 0; i < spaces; i++)
-                Console.Write(" ");
-            if (x % 2 == 0) Console.Write(' ');
+            Cons.WriteRowOf('#');
+            Cons.WriteCentered("Snake");
             ShowScore(y, 0);
         }
         static void ShowScore(int y, int score)
