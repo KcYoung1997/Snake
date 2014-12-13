@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.IO;
 using System.Linq;
 
 namespace SnakeGame
@@ -8,26 +8,35 @@ namespace SnakeGame
     {
         public static void SetWindowSize(int width, int height)
         {
-            if (Console.BufferWidth < width)
-            {
-                Console.BufferWidth = width;
-                Console.WindowWidth = width;
-            }
-            else
-            {
-                Console.WindowWidth = width;
-                Console.BufferWidth = width;
-            }
-            if (Console.BufferHeight < height)
-            {
-                Console.BufferHeight = height;
-                Console.WindowHeight = height;
-            }
-            else
-            {
-                Console.WindowHeight = height;
-                Console.BufferHeight = height;
-            }
+            //Over Max checking
+            if (width  > Console.LargestWindowWidth)  width  = Console.LargestWindowWidth;
+            if (height > Console.LargestWindowHeight) height = Console.LargestWindowHeight;
+            bool worked = false;
+            while (!worked)
+                try
+                {
+                    Console.WindowWidth = 1;
+                    Console.BufferWidth = width;
+                    Console.WindowWidth = width;
+                    worked = true;
+                }
+                catch (IOException) //Under minimum checking
+                {
+                    width += 1;
+                }
+            worked = false;
+            while (!worked)
+                try
+                {
+                    Console.WindowHeight = 1;
+                    Console.BufferHeight = height;
+                    Console.WindowHeight = height;
+                    worked = true;
+                }
+                catch (IOException) //Under minimum checking
+                {
+                    height += 1;
+                }
         }
         public static void WriteRowOf(char c)
         {
@@ -74,16 +83,17 @@ namespace SnakeGame
                 {
                     case ConsoleKey.UpArrow:
                         //If at first option, dont move up
-                        if (currentOption == 0) break;
                         Cursor(' ', options[currentOption].Length, currentOption);
                         currentOption--;
+                        if (currentOption == -1) currentOption = options.Length - 1; 
                         Cursor('►', options[currentOption].Length, currentOption);
                         break;
                     case ConsoleKey.DownArrow:
                         //If at last option, dont move down
-                        if (currentOption == options.Length - 1) break;
+
                         Cursor(' ', options[currentOption].Length, currentOption);
                         currentOption++;
+                        if (currentOption == options.Length) currentOption = 0;
                         Cursor('►', options[currentOption].Length, currentOption);
                         break;
                     case ConsoleKey.Enter:
@@ -96,7 +106,6 @@ namespace SnakeGame
         }
         private static void Cursor(char c, double width, int height)
         {
-
             Console.CursorTop = 5 + height * 2;
             Console.CursorLeft = (int)Math.Ceiling((Console.WindowWidth - width) / 2) - 2;
             Console.Write(c);
