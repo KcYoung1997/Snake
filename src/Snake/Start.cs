@@ -1,20 +1,188 @@
 ﻿using System;
+using System.Drawing;
 using System.Threading;
 using System.Linq;
 using System.Windows.Input;
 using System.IO;
 using System.Collections.Generic;
+using ConsoleExtensions;
 
 namespace SnakeGame
 {
     static class Start
     {
-
         static void Main()
         {
+            ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" "); ConsoleColors.BackgroundColor(Color.Black);
+            ConsoleColors.ForegroundColor(Color.White);
+            Console.Write(" ");
+            ConsoleColors.ForegroundColor(Color.Black);
+            ConsoleColors.BackgroundColor(Color.White);
+            Console.Write(" ");
+            Console.ReadLine();
+
+            ConsoleColors.ForegroundColor(79,79,79);
+            ConsoleColors.BackgroundColor(169,184,157);
+            Console.Clear();
             for (; ; )
             {
                 int[] options = MainMenu();
+
                 if (options[3] == 0)
                     Play(options[0], options[1], options[2], false);
                 if (options[3] == 1)
@@ -22,6 +190,7 @@ namespace SnakeGame
                 if (options[3] == 2)
                     Play(options[0], options[1], options[2], true);
             }
+
         }
         static int[] MainMenu()
         {
@@ -32,7 +201,7 @@ namespace SnakeGame
                 {
                     if (!File.Exists("Highscores"))
                     {
-                        mode = Cons.Menu("Snake", new[] { "Start Playing", "Tron (2P)", "Looping mode", "No Highscores" });
+                        mode = ConsoleWrite.Menu("Snake", new[] { "Start Playing", "Tron (2P)", "Looping mode", "No Highscores" });
                         continue;
                     }
                     string[] scores;
@@ -43,11 +212,11 @@ namespace SnakeGame
                         scores = lines.ToArray();
                     }
                 }
-                mode = Cons.Menu("Snake", new[] { "Start Playing", "Tron (2P)", "Looping mode", "View Highscores" });
+                mode = ConsoleWrite.Menu("Snake", new[] { "Start Playing", "Tron (2P)", "Looping mode", "View Highscores" });
             }
-            int x = (Cons.Menu("Board X", Enumerable.Range(2, (Console.LargestWindowWidth - 2) / 10 - 1).Select(i => (i*10).ToString()).ToArray()) + 2) * 10;
-            int y = (Cons.Menu("Board Y", Enumerable.Range(2, (Console.LargestWindowHeight - 5) / 10 - 1).Select(i => (i*10).ToString()).ToArray()) + 2) * 10;
-            int speed = (Cons.Menu("Snake Speed", new[] { "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" }) + 1) * 10;
+            int x = (ConsoleWrite.Menu("Board X", Enumerable.Range(2, (Console.LargestWindowWidth - 2) / 10 - 1).Select(i => (i*10).ToString()).ToArray()) + 2) * 10;
+            int y = (ConsoleWrite.Menu("Board Y", Enumerable.Range(2, (Console.LargestWindowHeight - 5) / 10 - 1).Select(i => (i*10).ToString()).ToArray()) + 2) * 10;
+            int speed = (ConsoleWrite.Menu("Snake Speed", new[] { "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" }) + 1) * 10;
             return new[] { x, y, speed, mode };
 
         }
@@ -101,7 +270,7 @@ namespace SnakeGame
             //Stop controls thread.
             controlThread.Abort();
             Console.CursorTop = Console.WindowHeight / 2;
-            Cons.WriteCentered("Game Over");
+            ConsoleWrite.WriteCentered("Game Over");
             PostStats(new [] {loop ? 1 : 0, score, snake.Length - 4, ticks});
         }
         static void PlayTron(int sizeX, int sizeY, int speed)
@@ -155,11 +324,10 @@ namespace SnakeGame
             player2Control.Abort();
             Console.SetCursorPosition(1, sizeY + 3);
             int player1Wins = player2.Dead && !player1.Dead ? 1 : 0;
-            int player2Wins = player1.Dead && !player2.Dead ? 0 : 1;
             Console.Clear();
             Console.CursorTop = Console.WindowHeight/2;
-            Cons.WriteCentered("Game Over");
-            Cons.WriteCentered( player1.Dead && player2.Dead ?
+            ConsoleWrite.WriteCentered("Game Over");
+            ConsoleWrite.WriteCentered( player1.Dead && player2.Dead ?
                                 "Both Players Died!" :
                                 "Player " + (player1.Dead ? "1" : "2") + " Died");
             Thread.Sleep(2000);
@@ -169,9 +337,9 @@ namespace SnakeGame
         static void InitUi(int x, int y)
         {
             Console.CursorVisible = false;
-            Cons.SetWindowSize(x + 2, y + 7);
+            ConsoleSize.SetWindowSize(x + 2, y + 7);
             Console.SetCursorPosition(0, 0);
-            Cons.WriteRowOf('#');
+            ConsoleWrite.WriteRowOf('#');
             for (int i = 0; i < y; i++)
             {
                 Console.Write("#");
@@ -181,8 +349,8 @@ namespace SnakeGame
                 }
                 Console.Write("#");
             }
-            Cons.WriteRowOf('#');
-            Cons.WriteCentered("Snake");
+            ConsoleWrite.WriteRowOf('#');
+            ConsoleWrite.WriteCentered("Snake");
             ShowScore(y, 0);
         }
         static void ShowScore(int y, int score)

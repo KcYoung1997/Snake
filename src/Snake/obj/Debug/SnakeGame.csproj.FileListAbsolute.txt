@@ -10,3 +10,5 @@ C:\Users\Keiran\Documents\GitHub\Snake\src\Snake\obj\Debug\Snake.pdb
 \\highlandcouncil.gov.uk\curriculum\Personal\Pupils\03YoungK\My Documents\ADV. Higher Computing\Snake-master\src\Snake\bin\Debug\Snake.exe
 \\highlandcouncil.gov.uk\curriculum\Personal\Pupils\03YoungK\My Documents\ADV. Higher Computing\Snake-master\src\Snake\bin\Debug\Snake.pdb
 \\highlandcouncil.gov.uk\curriculum\Personal\Pupils\03YoungK\My Documents\ADV. Higher Computing\Snake-master\src\Snake\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Keiran\Documents\GitHub\Snake\src\Snake\bin\Debug\ConsoleExtensions.dll
+C:\Users\Keiran\Documents\GitHub\Snake\src\Snake\bin\Debug\ConsoleExtensions.pdb

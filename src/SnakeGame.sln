@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "Snake\SnakeGame.csproj", "{C161DCF3-9065-430C-B939-1823FC3F8CB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExtensions", "ConsoleExtensions\ConsoleExtensions.csproj", "{8380BC0B-8CC2-47CC-A3A1-63AA55537FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{C161DCF3-9065-430C-B939-1823FC3F8CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C161DCF3-9065-430C-B939-1823FC3F8CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C161DCF3-9065-430C-B939-1823FC3F8CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8380BC0B-8CC2-47CC-A3A1-63AA55537FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8380BC0B-8CC2-47CC-A3A1-63AA55537FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8380BC0B-8CC2-47CC-A3A1-63AA55537FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8380BC0B-8CC2-47CC-A3A1-63AA55537FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

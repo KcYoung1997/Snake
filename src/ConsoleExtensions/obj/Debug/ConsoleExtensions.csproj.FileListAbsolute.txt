@@ -1,0 +1,5 @@
+C:\Users\Keiran\Documents\GitHub\Snake\src\ConsoleExtensions\obj\Debug\ConsoleExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Keiran\Documents\GitHub\Snake\src\ConsoleExtensions\bin\Debug\ConsoleExtensions.dll
+C:\Users\Keiran\Documents\GitHub\Snake\src\ConsoleExtensions\bin\Debug\ConsoleExtensions.pdb
+C:\Users\Keiran\Documents\GitHub\Snake\src\ConsoleExtensions\obj\Debug\ConsoleExtensions.dll
+C:\Users\Keiran\Documents\GitHub\Snake\src\ConsoleExtensions\obj\Debug\ConsoleExtensions.pdb
